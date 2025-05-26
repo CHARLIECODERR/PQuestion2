@@ -1,13 +1,10 @@
 FROM openjdk:17
 
-# Set the working directory inside the container
+# Set the working directory
 WORKDIR /app
 
-# Copy the source code into the container
-COPY src /app/src
-
-# Set the working directory to the source code directory
-WORKDIR /app/src
+# Copy the Java file into the container
+COPY HelloWorld.java .
 
 # Compile the Java program
 RUN javac HelloWorld.java
